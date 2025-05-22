@@ -9,6 +9,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        xs: "375px", // добавляем кастомный брейкпоинт xs
+      },
       colors: {
         // Используем hsl с параметром прозрачности <alpha-value>
         background: "hsl(var(--background) / <alpha-value>)",

@@ -51,15 +51,15 @@ export default function LandingPage() {
 
       {/* Первый экран */}
       <section className="flex flex-col items-center justify-center text-center py-20 px-6 max-w-4xl mx-auto">
-        <h1 className="text-5xl font-extrabold mb-4 max-w-3xl leading-tight">
+        <h1 className="text-5xl font-extrabold mb-4 max-w-3xl leading-tight sm:text-4xl xs:text-3xl">
           Путешествуйте по городу Буй с нашим интерактивным путеводителем
         </h1>
-        <p className="text-lg text-muted-foreground max-w-2xl mb-8">
+        <p className="text-lg text-muted-foreground max-w-2xl mb-8 sm:text-base xs:text-sm">
           Откройте для себя лучшие достопримечательности, стройте маршруты и делитесь впечатлениями.
         </p>
         <button
           onClick={() => window.scrollTo({ top: 600, behavior: 'smooth' })}
-          className="bg-primary text-primary-foreground px-8 py-4 rounded-full font-bold shadow-lg hover:bg-accent transition"
+          className="bg-primary text-primary-foreground px-8 py-4 rounded-full font-bold shadow-lg hover:bg-accent transition text-lg sm:text-base xs:text-sm"
         >
           Начать исследовать
         </button>
@@ -67,13 +67,13 @@ export default function LandingPage() {
 
       {/* Блок достопримечательностей */}
       <section id="pois" className="max-w-6xl mx-auto px-6 py-12">
-        <h2 className="text-3xl font-bold mb-6">Достопримечательности Буя</h2>
+        <h2 className="text-3xl font-bold mb-6 sm:text-2xl xs:text-xl">Достопримечательности Буя</h2>
         <PoiListPanel pois={allPois} onSelectPoi={setSelectedPoi} />
       </section>
 
       {/* Карта и планировщик маршрутов */}
       <section className="max-w-6xl mx-auto px-6 py-12 grid grid-cols-1 lg:grid-cols-3 gap-8">
-        <div className="lg:col-span-2 h-[500px] rounded-2xl overflow-hidden shadow-lg">
+        <div className="lg:col-span-2 h-[500px] rounded-2xl overflow-hidden shadow-lg sm:h-[300px] xs:h-[200px]">
           <YandexMapDisplay
             pois={allPois}
             selectedPoi={selectedPoi}
@@ -97,7 +97,7 @@ export default function LandingPage() {
 
       <AdminOnly>
         <section className="max-w-4xl mx-auto px-6 py-12">
-          <h2 className="text-3xl font-bold mb-6">Добавить новую достопримечательность</h2>
+          <h2 className="text-3xl font-bold mb-6 sm:text-2xl xs:text-xl">Добавить новую достопримечательность</h2>
           <AddPointOfInterestForm />
         </section>
       </AdminOnly>
