@@ -10,7 +10,8 @@ const config: Config = {
   theme: {
     extend: {
       screens: {
-        xs: "375px", // добавляем кастомный брейкпоинт xs
+        s: "375px",
+        xs: '200px' // добавляем кастомный брейкпоинт xs
       },
       colors: {
         // Используем hsl с параметром прозрачности <alpha-value>
