@@ -31,7 +31,7 @@ export function PoiListPanel({ pois, onSelectPoi }: PoiListPanelProps) {
     slidesToShow: Math.min(pois.length, 3),
     slidesToScroll: 1,
     arrows: true,
-    variableWidth: false, 
+    variableWidth: false,  // фиксированная ширина слайдов
     responsive: [
       {
         breakpoint: 1024,
@@ -72,7 +72,7 @@ export function PoiListPanel({ pois, onSelectPoi }: PoiListPanelProps) {
         {pois.length > 0 ? (
           <Slider {...settings} className="poi-slider w-full">
             {pois.map((poi) => (
-              <div key={poi.id} className="px-2 min-w-[280px]">
+              <div key={poi.id} className="px-2">
                 <Card
                   className="overflow-hidden rounded-xl shadow-md cursor-pointer hover:shadow-xl transition flex flex-col h-full"
                   onClick={() => onSelectPoi(poi)}

@@ -49,23 +49,25 @@ body {
 
   .poi-slider {
     max-width: 100%;
+    width: 100%;
     margin: 0 auto;
   }
 
-  /* Убираем горизонтальный скролл и скрываем переполнение */
   .slick-list {
-    overflow: hidden;
+    overflow: hidden !important;
+    width: 100% !important;
   }
 
-  /* Добавляем отступы между слайдами */
-  .slick-slide {
-    padding: 0 8px; /* по 8px слева и справа */
-    box-sizing: border-box;
-  }
-
-  /* Корректируем позиционирование трека, чтобы компенсировать padding */
   .slick-track {
-    margin-left: -8px;
+    display: flex !important;
+    width: 100% !important;
+    transition: transform 0.5s ease !important;
+  }
+
+  .slick-slide > div {
+    width: 100% !important;
+    box-sizing: border-box;
+    padding: 0 8px;
   }
 }
 

@@ -66,7 +66,7 @@ export default function LandingPage() {
       </section>
 
       {/* Блок достопримечательностей */}
-      <section id="pois" className="max-w-6xl mx-auto px-6 py-12">
+      <section id="pois" className="w-full max-w-full sm:max-w-6xl mx-auto px-4 sm:px-6 ">
         <h2 className="text-3xl font-bold mb-6 sm:text-2xl xs:text-xl">Достопримечательности Буя</h2>
         <PoiListPanel pois={allPois} onSelectPoi={setSelectedPoi} />
       </section>
