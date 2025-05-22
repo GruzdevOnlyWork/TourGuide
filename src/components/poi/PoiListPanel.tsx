@@ -24,30 +24,31 @@ interface PoiListPanelProps {
 }
 
 export function PoiListPanel({ pois, onSelectPoi }: PoiListPanelProps) {
-  const settings = {
+    const settings = {
     dots: true,
     infinite: pois.length > 3,
     speed: 500,
     slidesToShow: Math.min(pois.length, 3),
     slidesToScroll: 1,
     arrows: true,
+    variableWidth: false, 
     responsive: [
       {
-        breakpoint: 1024, // large screens
+        breakpoint: 1024,
         settings: {
           slidesToShow: Math.min(pois.length, 2),
           arrows: true,
         },
       },
       {
-        breakpoint: 640, // small screens (sm)
+        breakpoint: 640,
         settings: {
           slidesToShow: 1,
           arrows: false,
         },
       },
       {
-        breakpoint: 375, // extra small screens (xs) - ваш кастомный брейкпоинт
+        breakpoint: 375,
         settings: {
           slidesToShow: 1,
           arrows: false,

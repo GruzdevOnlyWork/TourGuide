@@ -46,6 +46,27 @@ body {
     margin: 0;
     padding: 0;
   }
+
+  .poi-slider {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  /* Убираем горизонтальный скролл и скрываем переполнение */
+  .slick-list {
+    overflow: hidden;
+  }
+
+  /* Добавляем отступы между слайдами */
+  .slick-slide {
+    padding: 0 8px; /* по 8px слева и справа */
+    box-sizing: border-box;
+  }
+
+  /* Корректируем позиционирование трека, чтобы компенсировать padding */
+  .slick-track {
+    margin-left: -8px;
+  }
 }
 
 @layer base {
