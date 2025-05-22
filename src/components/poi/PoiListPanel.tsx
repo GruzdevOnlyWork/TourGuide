@@ -61,7 +61,7 @@ export function PoiListPanel({ pois, onSelectPoi }: PoiListPanelProps) {
   return (
     <Card className="h-full flex flex-col border-0 shadow-lg rounded-2xl bg-card text-card-foreground">
       <CardHeader className="flex-shrink-0 px-6 py-4">
-        <CardTitle className="text-3xl font-extrabold text-primary flex flex-wrap items-center gap-3">
+        <CardTitle className="text-3xl font-bold mb-6 md:text-3xl sm:text-2xl xs:text-xl break-words text-primary flex  ">
           <MapPin className="h-8 w-8" /> Достопримечательности
         </CardTitle>
         <CardDescription className="text-muted-foreground mt-1">
