@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  :root {
+    /* Светлая тема */
+    --background: 0 0% 100%;      /* белый */
+    --foreground: 240 100% 25%;   /* синий */
+    --primary: 240 100% 50%;      /* ярко-синий */
+    --primary-foreground: 0 0% 100%; /* белый */
+    --card: 0 0% 96%;             /* светло-серый */
+    --card-foreground: 240 100% 25%;
+    --muted: 0 0% 90%;
+    --muted-foreground: 240 50% 60%;
+    --accent: 240 100% 50%;
+    --accent-foreground: 0 0% 100%;
+    --border: 0 0% 80%;
+    --radius: 1rem;
+  }
+
+  .dark {
+    /* Тёмная тема */
+    --background: 210 15% 8%;     /* тёмно-синий/серый */
+    --foreground: 210 15% 90%;    /* светло-серый */
+    --primary: 30 100% 50%;       /* оранжевый */
+    --primary-foreground: 210 15% 8%;
+    --card: 210 15% 12%;
+    --card-foreground: 210 15% 90%;
+    --muted: 210 15% 18%;
+    --muted-foreground: 210 15% 60%;
+    --accent: 30 100% 50%;
+    --accent-foreground: 210 15% 8%;
+    --border: 210 15% 20%;
+    --radius: 1rem;
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
