@@ -33,15 +33,25 @@ export function PoiListPanel({ pois, onSelectPoi }: PoiListPanelProps) {
     arrows: true,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1024, // large screens
         settings: {
           slidesToShow: Math.min(pois.length, 2),
+          arrows: true,
         },
       },
       {
-        breakpoint: 640,
+        breakpoint: 640, // small screens (sm)
         settings: {
           slidesToShow: 1,
+          arrows: false,
+        },
+      },
+      {
+        breakpoint: 375, // extra small screens (xs) - ваш кастомный брейкпоинт
+        settings: {
+          slidesToShow: 1,
+          arrows: false,
+          dots: true,
         },
       },
     ],
@@ -59,9 +69,9 @@ export function PoiListPanel({ pois, onSelectPoi }: PoiListPanelProps) {
       </CardHeader>
       <div className="flex-grow px-6 pb-6">
         {pois.length > 0 ? (
-          <Slider {...settings} className="poi-slider">
+          <Slider {...settings} className="poi-slider w-full">
             {pois.map((poi) => (
-              <div key={poi.id} className="px-2">
+              <div key={poi.id} className="px-2 min-w-[280px]">
                 <Card
                   className="overflow-hidden rounded-xl shadow-md cursor-pointer hover:shadow-xl transition flex flex-col h-full"
                   onClick={() => onSelectPoi(poi)}
