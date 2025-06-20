@@ -37,12 +37,11 @@ export function SidebarPanels({
 
   const handleSelectPoiFromList = (poi: PointOfInterest) => {
     setSelectedPoi(poi);
-    // setActiveTab('details'); // useEffect above handles this
   };
   
   const handleBackFromDetails = () => {
     setSelectedPoi(null);
-    setActiveTab('pois'); // Go back to POI list
+    setActiveTab('pois'); 
   };
 
   const handleShowRouteOnMap = () => {
@@ -50,7 +49,7 @@ export function SidebarPanels({
   };
   
   const handleViewPoiOnMap = (poi: PointOfInterest) => {
-    setSelectedPoi(poi); // This will also trigger map recenter via page.tsx logic
+    setSelectedPoi(poi);
   };
 
   return (

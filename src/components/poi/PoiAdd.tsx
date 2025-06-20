@@ -17,7 +17,6 @@ export function AddPointOfInterestForm() {
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState('');
 
-  // Конвертация файла в Base64
   const fileToBase64 = (file: File): Promise<string> =>
     new Promise((resolve, reject) => {
       const reader = new FileReader();

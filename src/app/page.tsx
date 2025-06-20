@@ -49,7 +49,6 @@ export default function LandingPage() {
       <ThemeToggle />
       <Navbar />
 
-      {/* Первый экран */}
       <section className="flex flex-col items-center justify-center text-center py-20 px-6 max-w-4xl mx-auto">
         <h1 className="text-5xl font-extrabold mb-4 max-w-3xl leading-tight sm:text-4xl xs:text-3xl">
           Путешествуйте по городу Буй с нашим интерактивным путеводителем
@@ -65,13 +64,11 @@ export default function LandingPage() {
         </button>
       </section>
 
-      {/* Блок достопримечательностей */}
       <section id="pois" className="w-full max-w-full sm:max-w-7xl mx-auto px-4 sm:px-6 ">
         <h2 className="text-3xl font-bold mb-6 sm:text-2xl xs:text-xl">Достопримечательности Буя</h2>
         <PoiListPanel pois={allPois} onSelectPoi={setSelectedPoi} />
       </section>
 
-      {/* Карта и планировщик маршрутов */}
       <section className="max-w-6xl mx-auto px-6 py-12 grid grid-cols-1 lg:grid-cols-3 gap-8">
         <div className="lg:col-span-2 h-[500px] rounded-2xl overflow-hidden shadow-lg sm:h-[300px] xs:h-[200px]">
           <YandexMapDisplay
@@ -102,7 +99,6 @@ export default function LandingPage() {
         </section>
       </AdminOnly>
 
-      {/* Футер */}
       <Footer />
     </div>
   );

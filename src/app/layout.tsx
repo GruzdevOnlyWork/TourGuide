@@ -3,8 +3,7 @@ import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import { AuthProvider } from '@/contexts/AuthContext';
 import { Toaster } from '@/components/ui/toaster';
-// Navbar import will be handled in page.tsx or specific layouts if needed globally
-// For this structure, Navbar will be part of page.tsx's layout content
+
 
 const geistSans = Geist({
   variable: '--font-geist-sans',

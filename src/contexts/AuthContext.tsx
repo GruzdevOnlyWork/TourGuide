@@ -62,7 +62,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     await setDoc(doc(firestoreDb, "users", user.uid), {
       email,
       username,
-      role: "user", // по умолчанию роль "user"
+      role: "user", 
       createdAt: serverTimestamp(),
     });
   };

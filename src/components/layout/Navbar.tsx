@@ -36,7 +36,6 @@ interface NavbarProps {
   mobileSidebarProps?: MobileSidebarContentProps;
 }
 
-// Расширяем тип пользователя, добавляя username
 interface ExtendedUser {
   uid: string;
   email: string | null;
@@ -51,7 +50,6 @@ export function Navbar({ MobileSidebarContent, mobileSidebarProps }: NavbarProps
   const [mobileSheetOpen, setMobileSheetOpen] = useState(false);
   const isMobile = useIsMobile();
 
-  // Загружаем username из Firestore, если есть пользователь
   useEffect(() => {
     async function fetchUsername() {
       if (!firebaseUser) {

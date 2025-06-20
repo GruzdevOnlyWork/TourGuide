@@ -8,12 +8,11 @@ body {
 
 @layer base {
   :root {
-    /* Светлая тема */
-    --background: 0 0% 100%;      /* белый */
-    --foreground: 240 100% 25%;   /* синий */
-    --primary: 240 100% 50%;      /* ярко-синий */
-    --primary-foreground: 0 0% 100%; /* белый */
-    --card: 0 0% 96%;             /* светло-серый */
+    --background: 0 0% 100%;    
+    --foreground: 240 100% 25%; 
+    --primary: 240 100% 50%;   
+    --primary-foreground: 0 0% 100%; 
+    --card: 0 0% 96%;           
     --card-foreground: 240 100% 25%;
     --muted: 0 0% 90%;
     --muted-foreground: 240 50% 60%;
@@ -24,10 +23,10 @@ body {
   }
 
   .dark {
-    /* Тёмная тема */
-    --background: 210 15% 8%;     /* тёмно-синий/серый */
-    --foreground: 210 15% 90%;    /* светло-серый */
-    --primary: 30 100% 50%;       /* оранжевый */
+
+    --background: 210 15% 8%;    
+    --foreground: 210 15% 90%;   
+    --primary: 30 100% 50%;     
     --primary-foreground: 210 15% 8%;
     --card: 210 15% 12%;
     --card-foreground: 210 15% 90%;

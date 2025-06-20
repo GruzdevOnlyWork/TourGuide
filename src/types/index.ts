@@ -10,36 +10,35 @@ export interface PointOfInterest {
   latitude: number;
   longitude: number;
   main_photo_base64?: string; 
-  photos?: Photo[]; // Photos might not be present initially or if none exist
+  photos?: Photo[]; 
 }
 
 export interface Photo {
   id: string;
-  poiId: string; // Should match Firestore field: poi_id
+  poiId: string;
   url: string;
-  uploadedBy: string; // Should match Firestore field: uploaded_by
-  uploadedAt: string | Date | Timestamp; // Can be Firestore Timestamp, Date object, or ISO string after conversion
+  uploadedBy: string; 
+  uploadedAt: string | Date | Timestamp;
   likes: number;
 }
 
 export interface User {
   id: string;
   username: string;
-  // email?: string; // Add if needed for more complex auth
 }
 
-// Keeping Route type simple for now, assumes client-side building
+
 export interface Route {
-  id: string; // Could be generated client-side
+  id: string;
   name: string;
-  poiIds: string[]; // Ordered list of PointOfInterest IDs
+  poiIds: string[]; 
 }
 
-// If storing routes in Firestore:
+
 export interface FirestoreRoute {
-  id?: string; // Firestore generates ID
+  id?: string; 
   name?: string;
   user_id: string;
   created_at: Timestamp;
-  poi_ids: string[]; // Array of POI IDs
+  poi_ids: string[]; 
 }

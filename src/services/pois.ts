@@ -11,7 +11,6 @@ import {
 } from "firebase/firestore";
 import { firestoreDb } from "@/lib/firebase";
 
-// Добавить новую достопримечательность
 export async function addPointOfInterest(poiData: {
   name: string;
   description: string;
@@ -35,7 +34,7 @@ export async function addPointOfInterest(poiData: {
   return docRef.id;
 }
 
-// Получить достопримечательности по категории
+
 export async function getPoisByCategory(category: string) {
   const poisRef = collection(firestoreDb, "point_of_interests");
   const q = query(poisRef, where("category", "==", category));
@@ -43,7 +42,6 @@ export async function getPoisByCategory(category: string) {
   return querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
 }
 
-// Добавить фото к POI (в подколлекцию photos)
 export async function addPhotoToPoi(poiId: string, photoData: {
   url: string;
   uploaded_by: string;
@@ -58,7 +56,6 @@ export async function addPhotoToPoi(poiId: string, photoData: {
   });
 }
 
-// Добавить лайк к фото (вложенная подколлекция likes)
 export async function addLikeToPhoto(poiId: string, photoId: string, userId: string) {
   await setDoc(doc(firestoreDb, "point_of_interests", poiId, "photos", photoId, "likes", userId), {
     created_at: serverTimestamp(),

@@ -31,7 +31,7 @@ export function AuthModal({ open, onOpenChange }: AuthModalProps) {
       } else {
         await register(email, password, username);
       }
-      onOpenChange(false); // Закрыть модал после успешного входа/регистрации
+      onOpenChange(false); 
       setEmail('');
       setPassword('');
       setUsername('');

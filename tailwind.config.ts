@@ -1,7 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-  darkMode: ["class"], // переключение тем по классу .dark
+  darkMode: ["class"],
   content: [
     "./src/app/**/*.{ts,tsx}",
     "./src/components/**/*.{ts,tsx}",
@@ -11,10 +11,9 @@ const config: Config = {
     extend: {
       screens: {
         s: "375px",
-        xs: '200px' // добавляем кастомный брейкпоинт xs
+        xs: '200px' 
       },
       colors: {
-        // Используем hsl с параметром прозрачности <alpha-value>
         background: "hsl(var(--background) / <alpha-value>)",
         foreground: "hsl(var(--foreground) / <alpha-value>)",
         card: {

@@ -1,4 +1,4 @@
-// src/services/photos.ts
+
 import {
   collection,
   addDoc,
@@ -18,7 +18,7 @@ export interface PhotoData {
   uploaded_at?: any;
 }
 
-// Добавить фото к достопримечательности (POI)
+
 export async function addPhotoToPoi(
   poiId: string,
   photoData: PhotoData
@@ -32,7 +32,7 @@ export async function addPhotoToPoi(
   return docRef.id;
 }
 
-// Получить все фото для POI
+
 export async function getPhotosByPoi(poiId: string): Promise<DocumentData[]> {
   const photosRef = collection(firestoreDb, "point_of_interests", poiId, "photos");
   const q = query(photosRef);
@@ -40,10 +40,3 @@ export async function getPhotosByPoi(poiId: string): Promise<DocumentData[]> {
   return querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
 }
 
-// Получить фото, загруженные конкретным пользователем (если нужно)
-export async function getPhotosByUser(userId: string): Promise<DocumentData[]> {
-  const photosRef = collectionGroup(firestoreDb, "photos");
-  const q = query(photosRef, where("uploaded_by", "==", userId));
-  const querySnapshot = await getDocs(q);
-  return querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
-}

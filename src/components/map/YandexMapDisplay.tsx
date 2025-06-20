@@ -57,8 +57,6 @@ export function YandexMapDisplay({
         modules={['control.ZoomControl', 'control.FullscreenControl', 'geoObject.addon.balloon']}
         instanceRef={ref => {
           if (ref) {
-            // например, отключить масштабирование колесом мыши
-            // ref.behaviors.disable('scrollZoom');
           }
         }}
       >
